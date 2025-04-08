@@ -1,15 +1,26 @@
 ---
-title: Sample
-author: hyperoot
-pubDatetime: 2024-04-09T12:00:00-05:30
-modDatetime: 2024-08-01T12:00:00-05:30 
-description: 'Sample description'
-draft: true
-tags:
-- anything
-- you
-- want
-hide_toc: 
-hide_sidenav: 
-hide_breadcrumbs: 
+title: Simp 1
 ---
+import Callout from "@/components/Callout.astro";
+
+By default, CelestialDocs sites include full-text search powered by [Fuse.js](https://www.fusejs.io/), which is a fast and low-bandwidth search tool for static sites.
+
+No configuration is required to enable search. Build and deploy your site, then use the search bar in the site header to find content.
+
+<Callout variant="info">
+You can trigger search using keyboard shortcut also. Just press `ctrl` + `K`
+</Callout>
+
+## Hide search
+
+In `config.js`, you can disable the search function by keeping the value of `hide_search` as `true`.
+
+```js
+// config.js
+
+export const docconfig = {
+  ...
+  hide_search: true,
+  ...
+};
+```
